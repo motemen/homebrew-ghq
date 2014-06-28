@@ -23,8 +23,11 @@ class Ghq < Formula
       ln_s buildpath, gopath/'src/github.com/motemen/ghq'
 
       system 'make', 'VERSION=HEAD (homebrew)'
+      tempnam = buildpath.to_str.match(%r{ghq-(.+)$})[1]
+      bin.install "ghq-#{tempnam}" => 'ghq'
+    else
+      bin.install 'ghq'
     end
 
-    bin.install 'ghq'
   end
 end
