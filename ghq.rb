@@ -18,11 +18,12 @@ class Ghq < Formula
 
   def install
     if build.head?
-      ENV['GOPATH'] = gopath = buildpath/'.go'
-      mkdir_p gopath/'src/github.com/motemen'
-      ln_s buildpath, gopath/'src/github.com/motemen/ghq'
+      gopath = buildpath/'.go'
 
-      system 'make', 'VERSION=HEAD (homebrew)'
+      ( gopath/'src/github.com/motemen/ghq' ).make_relative_symlink buildpath
+
+      ENV['GOPATH'] = gopath
+      system 'make', 'BUILD_FLAGS=-o ghq'
     end
 
     bin.install 'ghq'
