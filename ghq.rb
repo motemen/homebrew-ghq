@@ -1,10 +1,10 @@
 require 'formula'
 
-HOMEBREW_GHQ_VERSION='0.3'
+HOMEBREW_GHQ_VERSION='0.4'
 class Ghq < Formula
   homepage 'https://github.com/motemen/ghq'
   url "https://github.com/motemen/ghq/releases/download/v#{HOMEBREW_GHQ_VERSION}/ghq_darwin_amd64.zip"
-  sha1 'f53b4ee33e80d9ba2a74ab1fbad553963c458d8d'
+  sha1 '220d77560e6619d4d53c42c9c5c68d3c9fb03f5b'
 
   version HOMEBREW_GHQ_VERSION
   head 'https://github.com/motemen/ghq', :using => :git, :branch => 'master'
