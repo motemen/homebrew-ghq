@@ -12,8 +12,6 @@ class Ghq < Formula
   if build.head?
     depends_on 'go' => :build
     depends_on 'hg' => :build
-  else
-    depends_on 'unzip' => :build
   end
 
   def install
