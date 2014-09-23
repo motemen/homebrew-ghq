@@ -9,6 +9,8 @@ class Ghq < Formula
   version HOMEBREW_GHQ_VERSION
   head 'https://github.com/motemen/ghq', :using => :git, :branch => 'master'
 
+  option 'without-completions', 'Disable zsh completions'
+
   if build.head?
     depends_on 'go' => :build
     depends_on 'hg' => :build
@@ -22,6 +24,10 @@ class Ghq < Formula
 
       ENV['GOPATH'] = gopath
       system 'make', 'BUILD_FLAGS=-o ghq'
+
+      if build.with? 'completions'
+        zsh_completion.install 'zsh/_ghq'
+      end
     end
 
     bin.install 'ghq'
