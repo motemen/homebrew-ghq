@@ -25,9 +25,10 @@ class Ghq < Formula
       ENV['GOPATH'] = gopath
       system 'make', 'BUILD_FLAGS=-o ghq'
 
-      if build.with? 'completions'
-        zsh_completion.install 'zsh/_ghq'
-      end
+    end
+
+    if build.with? 'completions'
+      zsh_completion.install 'zsh/_ghq'
     end
 
     bin.install 'ghq'
