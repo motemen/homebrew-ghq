@@ -1,3 +1,8 @@
+DEPRECATED
+==========
+
+Homebrew now has [ghq formula](https://github.com/Homebrew/homebrew/blob/master/Library/Formula/ghq.rb) in itself, so you can install ghq by just hitting `brew install ghq`.
+
 homebrew-ghq
 ============
 
