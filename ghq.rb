@@ -5,10 +5,10 @@ class Ghq < Formula
   homepage 'https://github.com/motemen/ghq'
   if OS.mac?
     url "https://github.com/motemen/ghq/releases/download/v#{HOMEBREW_GHQ_VERSION}/ghq_darwin_amd64.zip"
-    sha1 'a860532b6529be74604334e5086c139831fc2be9'
+    sha256 '96c6b8dc16fda605cad0b2000c1856cfc9df5bfe1987ba38e86cd773f39fb3e7'
   elsif OS.linux?
     url "https://github.com/motemen/ghq/releases/download/v#{HOMEBREW_GHQ_VERSION}/ghq_linux_amd64.zip"
-    sha1 "d939d68338659dc0721056c62a5b8f709554b5ce"
+    sha256 'd0d285d190ab5adb06c120a005305b41e8e47ef068de85f8e4de2fac4cd8cf17'
   end
 
   version HOMEBREW_GHQ_VERSION
